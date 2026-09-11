@@ -12,8 +12,8 @@
 	<groupId>com.app.auction</groupId>
 	<artifactId>auction</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>auction</name>
-	<description>Auction Service</description>
+	<name>auction-admin</name>
+	<description>Auction Admin Service</description>
 	<url />
 	<licenses>
 		<license />
