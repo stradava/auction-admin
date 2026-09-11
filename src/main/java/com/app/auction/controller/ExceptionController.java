@@ -14,6 +14,7 @@ public class ExceptionController {
     
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Object> runtimeException(RuntimeException ex) {
+        log.error("runtimeException", ex);
         BaseResponse out = new BaseResponse();
         String[] exMessage = ex.getMessage().split(":");
         out.setResponseCode(exMessage[0]);
@@ -23,6 +24,7 @@ public class ExceptionController {
     
     @ExceptionHandler(IllegalStateException.class)
     public ResponseEntity<Object> illegalStateException(IllegalStateException ex) {
+        log.error("illegalStateException", ex);
         BaseResponse out = new BaseResponse();
         String[] exMessage = ex.getMessage().split(":");
         out.setResponseCode(exMessage[0]);
@@ -32,6 +34,7 @@ public class ExceptionController {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> exception(Exception ex) {
+        log.error("exception", ex);
         BaseResponse out = new BaseResponse();
         out.setResponseCode("99");
         out.setResponseDesc("System Error");
