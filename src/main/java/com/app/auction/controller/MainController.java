@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Slf4j
 @RestController
-@RequestMapping("v1/auction")
+@RequestMapping("v1/adm")
 @RequiredArgsConstructor
 @Validated
 public class MainController {
